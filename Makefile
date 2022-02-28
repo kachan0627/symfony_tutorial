@@ -1,23 +1,6 @@
-.PHONY: up
 up:
-	docker-compose up -d
-
-.PHONY: down
+	docker compose up -d
 down:
-	docker-compose down
-
-.PHONY: build
+	docker compose down
 build:
-	docker-compose build --no-cache --force-rm
-
-.PHONY: php
-php:
-	docker-compose exec php bash
-
-.PHONY: db
-db:
-	docker-compose exec database bash
-
-.PHONY: nginx
-nginx:
-	docker-compose exec nginx bash
+	docker compose build --no-cache --force-rm
