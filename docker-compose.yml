@@ -15,7 +15,7 @@ services:
     ports:
       - '9000:9000'
     volumes:
-      - ./app/my_project_directory:/var/www/symfony_docker:delegated
+      - ./app/my_project_directory/tutorial-project:/var/www/symfony_docker:delegated
     depends_on:
       - database
   nginx:
@@ -24,7 +24,7 @@ services:
     ports:
       - '8080:80'
     volumes:
-      - ./app/my_project_directory:/var/www/symfony_docker:delegated
+      - ./app/my_project_directory/tutorial-project:/var/www/symfony_docker:delegated
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php

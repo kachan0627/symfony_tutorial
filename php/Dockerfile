@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:7.4-fpm
   
 RUN apt update \
     && apt install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip \
@@ -14,7 +14,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
-RUN git config --global user.email "kachan.0627.619@gmail.com" \ 
-    && git config --global user.name "Katsumi Sumiya"
 
 COPY php.ini /usr/local/etc/php/
