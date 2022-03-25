@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use App\Entity\BlogPost;
+//use App\Entity\BlogPost;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,7 +23,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/blog/{slug}", name="blog_show")
      */
-    public function show(BlogPost $post): Response
+    public function show(): Response
     {
         // $post is the object whose slug matches the routing parameter
 
