@@ -2,7 +2,7 @@ FROM mysql:8.0
 
 ENV TZ='Asia/Tokyo'
 
-ENV MYSQL_ROOT_PASSWORD symfony
+ENV MYSQL_ROOT_PASSWORD secret
 ENV MYSQL_USER symfony
 ENV MYSQL_PASSWORD secret
 ENV MYSQL_DATABASE symfony_docker
