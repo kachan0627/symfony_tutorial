@@ -5,9 +5,17 @@ services:
     container_name: database
     build: ./mysql
     ports:
-      - '4306:3306'
+      - '3306:3306'
     volumes:
       - ./mysql_data:/var/lib/mysql:delegated
+
+  phpmyadmin:
+    build: ./phpmyadmin
+    depends_on:
+      - database
+    ports:
+      - "3080:80"
+
   php:
     container_name: php
     build:
