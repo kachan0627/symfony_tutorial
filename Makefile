@@ -21,3 +21,7 @@ db:
 .PHONY: nginx
 nginx:
 	docker-compose exec nginx bash
+
+.PHONY: install
+install:
+	docker-compose exec -T php -T npm install
